@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0D0D0D" />
+  <title>Meer Mohsin — It Was Always Going to Be This Way</title>
+  <meta name="description" content="I create digital experiences that aren't just seen, they're felt." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <script type="module" src="/main.js"></script>
+</head>
+<body>
+  <!-- Global overlays -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"><i>VIEW</i></span></div>
+  <div class="preview" aria-hidden="true"><img alt="" /></div>
+
+  <!-- 1. PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__half preloader__half--top"></div>
+    <div class="preloader__half preloader__half--bottom"></div>
+    <div class="preloader__center">
+      <div class="preloader__logo">
+        <img src="/assets/logo-m.png" alt="M" /><img src="/assets/logo-m.png" alt="" aria-hidden="true" />
+      </div>
+      <p class="mono preloader__label">CLICK ANYWHERE TO ACTIVATE THE EXPERIENCE<span class="blink">_</span></p>
+    </div>
+    <div class="mono preloader__count"><span id="count">000</span></div>
+  </div>
+
+  <!-- 2. HUD -->
+  <header class="hud">
+    <div class="hud__left mono"><span class="dot"></span>ONLINE<img class="hud__logo" src="/assets/logo-m.png" alt="M" /></div>
+    <div class="hud__right">
+      <button class="eq" id="music" aria-label="Toggle music"><i></i><i></i><i></i><i></i></button>
+      <a class="pill" href="#contact"><span>Let's Connect</span></a>
+      <button class="burger mono" id="burger" aria-label="Menu">MENU</button>
+    </div>
+  </header>
+
+  <nav class="menu" id="menu" aria-label="Main">
+    <ul>
+      <li><a href="#hero" data-line><span class="ico">◐</span>Home</a></li>
+      <li><a href="#fire" data-line><span class="ico">◑</span>About</a></li>
+      <li><a href="#services" data-line><span class="ico">◒</span>Services</a></li>
+      <li><a href="#work" data-line><span class="ico">◓</span>Work</a></li>
+      <li><a href="#blog" data-line><span class="ico">◔</span>Blog</a></li>
+      <li><a href="#contact" data-line><span class="ico">◕</span>Contact</a></li>
+    </ul>
+    <footer class="menu__foot mono">
+      <div>MY E-MAIL<br /><a href="mailto:meermohsn877@gmail.com">meermohsn877@gmail.com</a></div>
+      <div>SOCIAL<br /><a href="#">INSTAGRAM</a> <a href="#">BEHANCE</a> <a href="#">TIKTOK</a></div>
+    </footer>
+  </nav>
+
+  <main>
+    <!-- 3. HERO -->
+    <section class="hero" id="hero">
+      <canvas id="gl" aria-hidden="true"></canvas>
+      <img class="hero__shade" src="/assets/shade.webp" alt="" />
+      <p class="hero__role mono" data-reveal-line>VISUAL STORYTELLER · UI/UX DESIGNER · 3D WEB DEVELOPER</p>
+      <ul class="hero__side mono">
+        <li><span>◇</span>TENSION</li><li><span>◈</span>IMMERSION</li><li><span>◆</span>IMPACT</li>
+      </ul>
+      <h1 class="hero__name display" id="name" aria-label="Meer Mohsin">MEER MOHSIN</h1>
+      <p class="hero__sub">I create digital experiences that aren't just seen, they're felt. From the first impression to the smallest interaction, I focus on making every experience clear, immersive, and memorable.</p>
+      <div class="hero__cue mono">Scroll down for more<i></i></div>
+    </section>
+
+    <!-- 4. STATEMENT MARQUEE -->
+    <section class="marquees" aria-label="It Was Always Going to Be This Way.">
+      <div class="marquee" data-dir="-1"></div>
+      <div class="marquee" data-dir="1"></div>
+    </section>
+
+    <!-- 5. FIRE -->
+    <section class="fire" id="fire">
+      <img class="fire__gif fire__gif--top" src="/assets/fire.gif" alt="" loading="lazy" />
+      <div class="fire__bleed"></div>
+      <h2 class="display fire__title" id="fireTitle">
+        <span class="w">This</span> <span class="w">Will</span> <span class="w">Feel</span> <span class="w w--fire">Different</span>
+      </h2>
+      <p class="fire__p" data-lines>I don't just build websites, I create experiences that people enjoy exploring. Every scroll, every hover, every transition is a decision made with intent, so the work doesn't just look right, it behaves like it means it.</p>
+      <div class="stats">
+        <div><b class="display glow-ember" data-count="10">0</b><i class="plus">+</i><p>Each one different. Each one demanding something sharper.</p></div>
+        <div><b class="display glow-ember" data-count="25">0</b><i class="plus">+</i><p>Each one pushed beyond the obvious.</p></div>
+        <div><b class="display glow-ember" data-count="6">0</b><i class="plus">+</i><p>Learning fast. Moving faster.</p></div>
+      </div>
+      <p class="fire__close" data-lines>Design attracts attention. Development brings it to life. Together, they turn a visit into something remembered.</p>
+      <img class="fire__gif fire__gif--bottom" src="/assets/fire.gif" alt="" loading="lazy" />
+    </section>
+
+    <!-- 6. SERVICES -->
+    <section class="services" id="services">
+      <div class="services__bg display" aria-hidden="true">LEGACY</div>
+      <div class="rail" id="rail"><div class="rail__track">
+        <img src="/assets/SERVICES-1.avif" alt="" loading="lazy" /><img src="/assets/SERVICES-2.avif" alt="" loading="lazy" /><img src="/assets/SERVICES-3.avif" alt="" loading="lazy" /><img src="/assets/SERVICES-4.avif" alt="" loading="lazy" /><img src="/assets/SERVICES-5.avif" alt="" loading="lazy" /><img src="/assets/SERVICES-6.avif" alt="" loading="lazy" /><img src="/assets/SERVICES-7.avif" alt="" loading="lazy" /><img src="/assets/SERVICES-8.avif" alt="" loading="lazy" />
+      </div></div>
+      <ul class="svc-list">
+        <li class="display" data-preview="/assets/SERVICES-1.avif">UI - UX</li>
+        <li class="display" data-preview="/assets/SERVICES-5.avif">3D WEB</li>
+      </ul>
+      <ul class="tags mono">
+        <li data-preview="/assets/SERVICES-2.avif">Problem Solver</li><li data-preview="/assets/SERVICES-3.avif">User Research</li>
+        <li data-preview="/assets/SERVICES-4.avif">Frontend Engineering</li><li data-preview="/assets/SERVICES-6.avif">Three.js / WebGL</li>
+        <li data-preview="/assets/SERVICES-7.avif">GSAP Animation</li><li data-preview="/assets/SERVICES-8.avif">Performance Optimization</li>
+      </ul>
+    </section>
+
+    <!-- 7. THE FALL -->
+    <section class="fall" id="fall">
+      <img class="fall__men" src="/assets/falling.gif" alt="" loading="lazy" />
+      <div class="fall__text">
+        <h2 class="display" data-a>The fall was always part of the path.</h2>
+        <h2 class="display" data-b>And from that point, everything began to rebuild with intention.</h2>
+      </div>
+      <div class="fall__paper"><img src="/assets/paper-tore.png" alt="" /><div class="fall__fill"></div></div>
+    </section>
+
+    <!-- 8. GALLERY -->
+    <section class="gallery" id="gallery">
+      <div class="gallery__head"><span class="display idx">01</span><img class="ring" src="/assets/ring.avif" alt="" data-cursor="view" loading="lazy" /></div>
+      <div class="gallery__grid">
+        <figure data-clip><img src="/assets/SERVICES-1.avif" alt="" loading="lazy" /></figure>
+        <figure data-clip><img src="/assets/SERVICES-3.avif" alt="" loading="lazy" /></figure>
+        <figure data-clip><img src="/assets/SERVICES-5.avif" alt="" loading="lazy" /></figure>
+        <figure data-clip><img src="/assets/SERVICES-7.avif" alt="" loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <!-- 9. WORK -->
+    <section class="work" id="work">
+      <div class="work__pin">
+        <div class="work__head"><h2 class="display">My work</h2><p class="mono">Scroll down for more</p></div>
+        <div class="work__track" id="workTrack">
+          <article class="card" data-cursor="view"><span class="mono num">01</span><div class="card__img"><img src="/assets/cod.avif" alt="COD" loading="lazy" /></div></article>
+          <article class="card" data-cursor="view"><span class="mono num">02</span><div class="card__img"><img src="/assets/az.avif" alt="AZ" loading="lazy" /></div></article>
+          <article class="card" data-cursor="view"><span class="mono num">03</span><div class="card__img"><img src="/assets/am.avif" alt="AM" loading="lazy" /></div></article>
+          <article class="card" data-cursor="view"><span class="mono num">04</span><div class="card__img"><img src="/assets/chat.avif" alt="Chat" loading="lazy" /></div></article>
+          <article class="card" data-cursor="view"><span class="mono num">05</span><div class="card__img"><img src="/assets/fi.avif" alt="FI" loading="lazy" /></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. PROCESS -->
+    <section class="process" id="process">
+      <div class="process__pin">
+        <div class="process__bgs">
+          <img src="/assets/mohsin-standing.avif" alt="" class="is-on" /><img src="/assets/mohsin-standing.avif" alt="" /><img src="/assets/mohsin-standing.avif" alt="" /><img src="/assets/mohsin-standing.avif" alt="" />
+        </div>
+        <h2 class="display process__title">From the First Idea to the Final Frame Every Step Is Crafted to Create an Unforgettable Digital Experience.</h2>
+        <div class="process__line"><i></i></div>
+        <div class="steps">
+          <div class="step is-on"><h3 class="display">Discovery</h3><p>Every great story begins with understanding. Who is it for, what should they feel, and what is at stake.</p></div>
+          <div class="step"><h3 class="display">Creative Direction</h3><p>Ideas take shape through thoughtful research, wireframes, visual exploration, motion concepts, and design systems.</p></div>
+          <div class="step"><h3 class="display">Digital Craftsmanship</h3><p>Every interaction, animation, and line of code is crafted for performance, accessibility, and lasting impact.</p></div>
+          <div class="step"><h3 class="display">Launch &amp; Evolution</h3><p>A successful launch is only the beginning. The work keeps learning, measuring, and sharpening.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. BLOG -->
+    <section class="blog" id="blog">
+      <h2 class="display">VISUAL JOURNAL</h2>
+      <p class="blog__p">Notes on motion, mood, and the craft of making interfaces that linger.</p>
+      <div class="blog__grid">
+        <a class="post" href="#"><div class="post__img" data-mask><img src="/assets/SERVICES-2.avif" alt="" loading="lazy" /></div><time class="mono">July 1, 2026</time><h3>Motion Beyond Animation</h3></a>
+        <a class="post" href="#"><div class="post__img" data-mask><img src="/assets/SERVICES-4.avif" alt="" loading="lazy" /></div><time class="mono">June 14, 2026</time><h3>The Psychology of Dark Interfaces</h3></a>
+        <a class="post" href="#"><div class="post__img" data-mask><img src="/assets/SERVICES-6.avif" alt="" loading="lazy" /></div><time class="mono">May 22, 2026</time><h3>Designing Experiences, Not Websites</h3></a>
+      </div>
+    </section>
+
+    <!-- 12. AWARDS -->
+    <section class="awards" id="awards">
+      <h2 class="display awards__h" aria-hidden="true" data-par="-40">AWARDS &amp; RECOGNITIONS</h2>
+      <h2 class="display awards__h awards__h--2" data-par="40">AWARDS &amp; RECOGNITIONS</h2>
+      <p class="awards__p">Forged in obsession, shaped in darkness, and recognized beyond the screen.</p>
+      <ul class="rows">
+        <li><a href="https://www.awwwards.com" target="_blank" rel="noopener"><span>Site of the Day</span><span class="mono">Awwwards</span><i>→</i></a></li>
+        <li><a href="https://www.awwwards.com" target="_blank" rel="noopener"><span>Honorable Mention</span><span class="mono">Awwwards</span><i>→</i></a></li>
+        <li><a href="https://www.awwwards.com" target="_blank" rel="noopener"><span>Developer Award</span><span class="mono">Awwwards</span><i>→</i></a></li>
+      </ul>
+    </section>
+
+    <!-- 13. CTA + FOOTER -->
+    <section class="cta" id="cta">
+      <img class="cta__ring" src="/assets/ring.avif" alt="" loading="lazy" />
+      <h2 class="display">Every Great Story Needs A Powerful Ending.</h2>
+      <a class="btn magnetic mono" href="#contact"><span>LET'S BE CREATIVE</span></a>
+    </section>
+
+    <footer class="contact" id="contact">
+      <img class="contact__bg" src="/assets/contact-us-bg.webp" alt="" loading="lazy" />
+      <h2 class="display">GET IN TOUCH</h2>
+      <div class="contact__links mono">
+        <a href="mailto:meermohsn877@gmail.com">meermohsn877@gmail.com</a>
+        <a href="#">INSTAGRAM</a><a href="#">BEHANCE</a><a href="#">TIKTOK</a>
+      </div>
+      <div class="marquees marquees--foot"><div class="marquee" data-dir="-1"></div></div>
+    </footer>
+  </main>
+</body>
+</html>
